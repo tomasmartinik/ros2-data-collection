@@ -1,0 +1,71 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+{
+	"name": "ros2-devcontainer",
+
+	"image": "data-collection-docker-image:0.1",
+
+	// Use build argument to build devcontainer from dockerfile
+	// "build": {
+	// 	"dockerfile": ".Dockerfile",
+	// 	"args": {
+	// 		"BUILDKIT_INLINE_CACHE": "0"
+	// 	}
+	// },
+
+	"remoteUser": "ubuntu",
+	// Use following to mount external drive
+	// "mounts":[
+	// 	"type=bind,source=/media/user,target=/media/devcon,bind-propagation=shared",
+	// ],
+
+	// see http://wiki.ros.org/docker/Tutorials/Hardware%20Acceleration
+	// for more details regarding hardware accelerator for RViz.
+	// This config is prepared for Intel graphics.
+	"runArgs": [
+		"--network=host",
+		"--cap-add=SYS_PTRACE",
+		"--security-opt=seccomp:unconfined",
+		"--security-opt=apparmor:unconfined",
+		"--volume=/tmp/.X11-unix:/tmp/.X11-unix",
+		"--device-cgroup-rule=c 188:* rw",
+		"--device-cgroup-rule=c 81:* rw",
+		"--volume=/dev:/dev",
+		// "--env='DISPLAY=$DISPLAY'",
+	],
+	"containerEnv": {
+		"DISPLAY": "${localEnv:DISPLAY}",
+		"WORKSPACE": "${containerWorkspaceFolder}",
+		// Use to switch middleware implementation (must be installed!)
+		// "RMW_IMPLEMENTATION": "rmw_cyclonedds_cpp",xhost +local
+		// To change domain ID
+		"ROS_DOMAIN_ID": "1"
+	},
+	"onCreateCommand": "echo \"if [ -f ${containerWorkspaceFolder}/install/setup.bash ]; then source ${containerWorkspaceFolder}/install/setup.bash; fi\" >> /home/ubuntu/.bashrc",
+	// Set *default* container specific settings.json values on container create.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"terminal.integrated.profiles.linux": {
+					"bash": {
+						"path": "bash"
+					},
+				},
+				"terminal.integrated.defaultProfile.linux": "bash"
+			},
+			"extensions": [
+				"ms-python.python",
+				"ms-vscode.cpptools",
+				"ms-toolsai.jupyter",
+				"ms-vscode.cmake-tools",
+				"ms-iot.vscode-ros",
+				"redhat.vscode-yaml",
+				"smilerobotics.urdf",
+				"streetsidesoftware.code-spell-checker",
+				"twxs.cmake",
+				"yzhang.markdown-all-in-one"
+			],
+		}
+	}
+}
