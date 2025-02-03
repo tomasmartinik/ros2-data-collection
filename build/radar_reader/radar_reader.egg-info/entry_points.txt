@@ -1,0 +1,2 @@
+[console_scripts]
+radar_reader_node = radar_reader.radar_reader_node:main

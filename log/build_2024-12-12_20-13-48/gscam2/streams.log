@@ -1,0 +1,66 @@
+[0.020s] Invoking command in '/workspaces/ros2-devcontainer-example-ws/build/gscam2': AMENT_PREFIX_PATH=/workspaces/ros2-devcontainer-example-ws/install/ros2_shared:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/ros2-devcontainer-example-ws/install/ros2_shared:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --build /workspaces/ros2-devcontainer-example-ws/build/gscam2 -- -j4 -l4
+[0.144s] [  7%] [32mBuilding CXX object CMakeFiles/gscam_node.dir/src/gscam_node.cpp.o[0m
+[14.237s] [ 14%] [32m[1mLinking CXX shared library libgscam_node.so[0m
+[14.726s] [ 14%] Built target gscam_node
+[14.753s] [ 21%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[20.587s] [ 28%] [32m[1mLinking CXX static library libgtest.a[0m
+[20.687s] [ 28%] Built target gtest
+[20.720s] [ 35%] [32mBuilding CXX object CMakeFiles/gscam_main.dir/src/gscam_main.cpp.o[0m
+[25.697s] [ 42%] [32m[1mLinking CXX executable gscam_main[0m
+[26.014s] [ 42%] Built target gscam_main
+[26.054s] [ 57%] Built target gtest_main
+[26.083s] [ 64%] [32mBuilding CXX object CMakeFiles/subscriber_node.dir/src/subscriber_node.cpp.o[0m
+[38.958s] [ 71%] [32m[1mLinking CXX shared library libsubscriber_node.so[0m
+[39.448s] [ 71%] Built target subscriber_node
+[39.482s] [ 78%] [32mBuilding CXX object CMakeFiles/smoke_test.dir/test/smoke_test.cpp.o[0m
+[39.485s] [ 85%] [32mBuilding CXX object CMakeFiles/ipc_test_main.dir/src/ipc_test_main.cpp.o[0m
+[45.601s] [ 92%] [32m[1mLinking CXX executable ipc_test_main[0m
+[46.250s] [ 92%] Built target ipc_test_main
+[55.901s] [100%] [32m[1mLinking CXX executable smoke_test[0m
+[56.697s] [100%] Built target smoke_test
+[56.714s] Invoked command in '/workspaces/ros2-devcontainer-example-ws/build/gscam2' returned '0': AMENT_PREFIX_PATH=/workspaces/ros2-devcontainer-example-ws/install/ros2_shared:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/ros2-devcontainer-example-ws/install/ros2_shared:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --build /workspaces/ros2-devcontainer-example-ws/build/gscam2 -- -j4 -l4
+[56.716s] Invoking command in '/workspaces/ros2-devcontainer-example-ws/build/gscam2': AMENT_PREFIX_PATH=/workspaces/ros2-devcontainer-example-ws/install/ros2_shared:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/ros2-devcontainer-example-ws/install/ros2_shared:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --install /workspaces/ros2-devcontainer-example-ws/build/gscam2
+[56.726s] -- Install configuration: ""
+[56.726s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/include/gscam2
+[56.726s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/include/gscam2/gscam_node.hpp
+[56.727s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/include/gscam2/subscriber_node.hpp
+[56.727s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/lib/libgscam_node.so
+[56.732s] -- Set non-toolchain portion of runtime path of "/workspaces/ros2-devcontainer-example-ws/install/gscam2/lib/libgscam_node.so" to ""
+[56.732s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/lib/libsubscriber_node.so
+[56.738s] -- Set non-toolchain portion of runtime path of "/workspaces/ros2-devcontainer-example-ws/install/gscam2/lib/libsubscriber_node.so" to ""
+[56.738s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/lib/gscam2/gscam_main
+[56.738s] -- Set non-toolchain portion of runtime path of "/workspaces/ros2-devcontainer-example-ws/install/gscam2/lib/gscam2/gscam_main" to ""
+[56.739s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/lib/gscam2/ipc_test_main
+[56.739s] -- Set non-toolchain portion of runtime path of "/workspaces/ros2-devcontainer-example-ws/install/gscam2/lib/gscam2/ipc_test_main" to ""
+[56.739s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/cfg
+[56.740s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/cfg/my_camera.ini
+[56.740s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/cfg/workaround_params.yaml
+[56.740s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/cfg/params.yaml
+[56.740s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/launch
+[56.741s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/launch/composition_launch.py
+[56.741s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/launch/container_param_launch.py
+[56.741s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/launch/republish_launch.py
+[56.741s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/launch/node_param_launch.py
+[56.741s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/environment/library_path.sh
+[56.741s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/environment/library_path.dsv
+[56.742s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/ament_index/resource_index/package_run_dependencies/gscam2
+[56.742s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/ament_index/resource_index/parent_prefix_path/gscam2
+[56.742s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/environment/ament_prefix_path.sh
+[56.742s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/environment/ament_prefix_path.dsv
+[56.742s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/environment/path.sh
+[56.743s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/environment/path.dsv
+[56.743s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/local_setup.bash
+[56.743s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/local_setup.sh
+[56.743s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/local_setup.zsh
+[56.743s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/local_setup.dsv
+[56.743s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/package.dsv
+[56.744s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/ament_index/resource_index/packages/gscam2
+[56.744s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/ament_index/resource_index/rclcpp_components/gscam2
+[56.744s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/cmake/gscam2_targetsExport.cmake
+[56.744s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/cmake/gscam2_targetsExport-noconfig.cmake
+[56.745s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/cmake/ament_cmake_export_targets-extras.cmake
+[56.745s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/cmake/ament_cmake_export_dependencies-extras.cmake
+[56.745s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/cmake/gscam2Config.cmake
+[56.745s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/cmake/gscam2Config-version.cmake
+[56.746s] -- Installing: /workspaces/ros2-devcontainer-example-ws/install/gscam2/share/gscam2/package.xml
+[56.749s] Invoked command in '/workspaces/ros2-devcontainer-example-ws/build/gscam2' returned '0': AMENT_PREFIX_PATH=/workspaces/ros2-devcontainer-example-ws/install/ros2_shared:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspaces/ros2-devcontainer-example-ws/install/ros2_shared:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --install /workspaces/ros2-devcontainer-example-ws/build/gscam2
