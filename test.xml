@@ -1,7 +1,7 @@
 <launch>
 
 
-    <arg name="camera_device" default="/dev/video4"/>
+    <arg name="camera_device" default="/dev/video2"/> <!--2 pro dell, 4 pro thinkpad-->
     <arg name="camera_name" default="arducam_no1"/>
     <arg name="camera_info_url" default="file://$(env WORKSPACE)/calibration/arducam_no01_low_distortion_HD.yaml"/>
 
