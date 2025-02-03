@@ -85,7 +85,11 @@ class RadarPublisher(Node):
                 amplitude = np.abs(data)
                 msg_data = amplitude.flatten().tolist()
             elif isinstance(self.config, et.a111.SparseServiceConfig):
-                msg_data = data.flatten().tolist()
+                real_part = np.real(data)
+                real_part = np.imag(data)
+
+                combined_data = np.stack((real_part,imag_part), axis=-1)
+                msg_data = combined_data.flatten().tolist()
             else:  # Envelope service
                 msg_data = data.tolist()
 
