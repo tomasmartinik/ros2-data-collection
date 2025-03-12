@@ -1,0 +1,62 @@
+<launch>
+    <arg name="camera_device" default="/dev/video2"/> <!--2 pro dell, 4 pro thinkpad-->
+    <arg name="camera_name" default="arducam_no1"/>
+    <arg name="camera_info_url" default="file://$(env WORKSPACE)/calibration/arducam_no01_low_distortion_HD.yaml"/>
+
+    <node pkg="gscam2" exec="gscam_main">
+        <param name="preroll" value="False"/>
+        <param name="use_gst_timestamps" value="True"/>
+        <param name="frame_id" value="camera"/>
+        <param name="camera_name" value="$(var camera_name)"/>
+        <param name="image_encoding" value="jpeg"/>
+        <param name="gscam_config" value="v4l2src device=$(var camera_device) do-timestamp=true ! queue ! video/x-h264,width=1920,height=1080,framerate=10/1 ! h264parse ! avdec_h264 ! videoscale ! video/x-raw, width=640, height=360 ! jpegenc ! videoconverter"/>
+        <param name="camera_info_url" value="$(var camera_info_url)"/>
+    </node>
+
+    <!-- Radar Node -->
+    <arg name="serial_port" default="/dev/ttyUSB0"/>
+          
+    <!-- 
+    Select radar service type:
+    - "e" for "envelope" mode
+    - "s" for "sparse" mode 
+    -->      
+    <arg name="service_type" default="s"/>
+    <arg name="range_interval" default="[0.24, 1.0]"/>
+    <arg name="update_rate" default="50.0"/>  <!-- Updated -->
+    <arg name="sweeps_per_frame" default="32"/>  <!-- Updated -->
+    <arg name="profile" default="PROFILE_3"/>
+    <arg name="mur" default="MUR_6"/>
+    <arg name="running_average_factor" default="0.0"/>
+    <arg name="repetition_mode" default="SENSOR_DRIVEN"/>
+    <arg name="downsampling_factor" default="1"/>
+    <arg name="hw_accelerated_average_samples" default="10"/>
+    <arg name="gain" default="0.23"/>
+    <arg name="maximize_signal_attenuation" default="false"/>
+    <arg name="noise_level_normalization" default="true"/>
+    <arg name="tx_disable" default="false"/>
+    <arg name="power_save_mode" default="READY"/>  <!-- Updated -->
+    <arg name="asynchronous_measurement" default="true"/>
+    <arg name="sampling_mode" default="B"/>
+    <arg name="sweep_rate" default="None"/>
+
+    <node pkg="radar_reader" exec="radar_reader_node" output="screen">
+        <param name="serial_port" value="$(var serial_port)"/>
+        <param name="service_type" value="$(var service_type)"/>
+        <param name="range_interval" value="$(var range_interval)"/>
+        <param name="update_rate" value="$(var update_rate)"/>
+        <param name="sweeps_per_frame" value="$(var sweeps_per_frame)"/>
+        <param name="profile" value="$(var profile)"/>
+        <param name="mur" value="$(var mur)"/>
+        <param name="running_average_factor" value="$(var running_average_factor)"/>
+        <param name="repetition_mode" value="$(var repetition_mode)"/>
+        <param name="downsampling_factor" value="$(var downsampling_factor)"/>
+        <param name="hw_accelerated_average_samples" value="$(var hw_accelerated_average_samples)"/>
+        <param name="gain" value="$(var gain)"/>
+        <param name="maximize_signal_attenuation" value="$(var maximize_signal_attenuation)"/>
+        <param name="noise_level_normalization" value="$(var noise_level_normalization)"/>
+        <param name="tx_disable" value="$(var tx_disable)"/>
+        <param name="power_save_mode" value="$(var power_save_mode)"/>
+        <param name="asynchronous_measurement" value="$(var asynchronous_measurement)"/>
+    </node> 
+</launch>

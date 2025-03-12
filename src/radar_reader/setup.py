@@ -21,8 +21,10 @@ setup(
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': [
-            'radar_reader_node = radar_reader.radar_reader_node:main',
-        ],
-    },
+    'console_scripts': [
+        'radar_reader_node = radar_reader.radar_reader_node:main',
+        'radar_visu = radar_reader.radar_visu:main',  # Nový node
+    ],
+},
+
 )
